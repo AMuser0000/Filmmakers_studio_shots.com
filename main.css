@@ -1,0 +1,15 @@
+body {
+    background-image: url(images/Background1.jpg);
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+img {
+    width: 100px;
+    border-radius: 50px;
+}
+
+.username {
+    font-weight: 100;
+}

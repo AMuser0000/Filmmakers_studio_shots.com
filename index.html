@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILMMAKERS_STUDIO_SHOTS</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        img {
+            width: 100px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        .username {
+            font-weight: bold;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .signup-form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            font-weight: bold; /* Make paragraphs bold */
+            color: #222; /* Darker color for better readability */
+            line-height: 1.5; /* Improve line spacing */
+            margin: 10px 0; /* Add margin for spacing */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #signup-section {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSignupForm() {
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('signup-section').style.display = 'block';
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div id="main-content">
+        <h1>FILMMAKERS_STUDIO_SHOTS</h1>
+        
+        <!-- Clickable Image Section -->
+        <img src="images/WhatsApp Image 2024-07-10 à 16.42.53_68a23dea.jpg" alt="FILMMAKERS_STUDIO_SHOTS" onclick="showSignupForm()">
+        
+        <p class="username"><strong>Greetings!</strong></p>
+        <p>Welcome to FILMMAKERS_STUDIO_SHOTS! We are an independent film team passionate about storytelling. Despite facing financial challenges, we are dedicated to bringing our cinematic visions to life.</p>
+        <p>Our website offers a glimpse into our creative journey, with behind-the-scenes updates and insights into our filmmaking process. We invite you to join us as we navigate the world of independent cinema and strive to inspire audiences with our stories.</p>
+        <p>Get involved and be part of our exciting journey in filmmaking!</p>
+    </div>
+
+    <div id="signup-section">
+        <h1>Sign Up for FILMMAKERS_STUDIO_SHOTS</h1>
+        
+        <!-- Sign-Up Form Section -->
+        <div class="signup-form" id="signup-form">
+            <h2>Sign Up</h2>
+            <form action="submit_signup.php" method="POST" id="signup" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="family-name">Family Name:</label>
+                    <input type="text" id="family-name" name="family_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">G-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Select Your Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select One</option>
+                        <option value="acting">Acting</option>
+                        <option value="lighting">Responsible for Lighting</option>
+                        <option value="scriptwriting">Scriptwriting</option>
+                        <option value="filming">Filming (Camera Person)</option>
+                        <option value="video-editing">Video Editing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Why did you choose to join?</label>
+                    <textarea id="reason" name="reason" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div id="success-message" style="display: none; text-align: center;">
+            <h2>Thank you for signing up!</h2>
+            <p>We appreciate your interest in joining FILMMAKERS_STUDIO_SHOTS. We will be in touch soon!</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
